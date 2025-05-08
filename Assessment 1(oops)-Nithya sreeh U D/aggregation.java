@@ -12,22 +12,26 @@ class Project {
 
 class Developer {
     String name;
+    Project project; 
 
-    Developer(String name) {
+    Developer(String name, Project project) {
         this.name = name;
+        this.project = project;
     }
 
     public void showDeveloper() {
         System.out.println("Developer Name: " + name);
+        project.showProject();
     }
 }
 
 class ITMain {
     public static void main(String args[]) {
-        Developer dev = new Developer("Arjun");
         Project proj = new Project("Inventory System");
+        Developer dev = new Developer("Arjun", proj); 
 
         dev.showDeveloper();
-        proj.showProject();
     }
 }
+
+ 
