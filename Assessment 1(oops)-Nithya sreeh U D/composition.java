@@ -17,21 +17,41 @@ class Patient {
     String name;
     Doctor doc;
 
-    Patient(String name, Doctor doc) {
+    Patient(String name) {
         this.name = name;
-        this.doc = doc;
+        
     }
 
     public void showPatient() {
         System.out.println("Patient Name: " + name);
+        
+    }
+}
+class Diagonosis
+{
+    String disease;
+    Doctor doc;
+    Patient p;
+    Diagonosis(String disease,Doctor doc,Patient p)
+    {
+        this.disease=disease;
+        this.doc=doc;
+        this.p=p;
+    }
+    public void showReport()
+    {
         doc.showDoctor();
+        p.showPatient();
+        System.out.print("disease: "+disease);
     }
 }
 
-class HospitalMain {
+class Main {
     public static void main(String args[]) {
         Doctor d = new Doctor("Dr. Anu", "ENT");
-        Patient p = new Patient("Rahul", d);
-        p.showPatient();
+        Patient p = new Patient("Rahul");
+        Diagonosis di=new Diagonosis("fever",d,p);
+        di.showReport();
     }
 }
+    
