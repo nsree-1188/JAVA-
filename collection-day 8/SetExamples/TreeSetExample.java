@@ -1,0 +1,46 @@
+import java.util.*;
+public class TreeSetExample {
+    public static void main(String[] args) {
+        Set<Integer> set1 = new TreeSet<>();
+        Set<Integer> set2 = new TreeSet<>();
+        Set<Integer> set3 = new TreeSet<>();
+        set1.add(2);
+        set1.add(1);
+        set2.add(4);
+        set2.add(5);
+        set3.add(2);
+        set3.add(4);
+        System.out.println("set1 before add(6): " + set1);
+        set1.add(6);
+        System.out.println("set1 after add(6): " + set1);
+
+    
+        System.out.println("set1 before addAll(set2): " + set1);
+        set1.addAll(set2);
+        System.out.println("set1 after addAll(set2): " + set1);
+        System.out.println("set1 contains 3: " + set1.contains(3));
+        System.out.println("set1 containsAll set3: " + set1.containsAll(set3));
+        System.out.println("set2 containsAll set3: " + set2.containsAll(set3));
+        System.out.println("set1 before retainAll(set2): " + set1);
+        set1.retainAll(set2);
+        System.out.println("set1 after retainAll(set2): " + set1);
+        System.out.println("set1 before remove(4): " + set1);
+        set1.remove(4);
+        System.out.println("set1 after remove(4): " + set1);
+
+         System.out.println("set2 before removeAll(set1): " + set2);
+        set2.removeAll(set1);
+        System.out.println("set2 after removeAll(set1): " + set2);
+
+    
+        System.out.println("set3 before clear(): " + set3);
+        set3.clear();
+        System.out.println("set3 after clear(): " + set3);
+
+    
+        System.out.println("set3 is empty: " + set3.isEmpty());
+
+       
+        System.out.println("set1 size: " + set1.size());
+    }
+}
