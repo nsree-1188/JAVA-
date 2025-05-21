@@ -1,0 +1,33 @@
+void main() {
+  int a = 10;
+  int b = 3;
+  print("Arithmetic:");
+  print("a + b = ${a + b}");
+  print("a - b = ${a - b}");
+  print("a * b = ${a * b}");
+  print("a / b = ${a / b}");
+  print("a ~/ b = ${a ~/ b}"); 
+  print("a % b = ${a % b}");   
+  print("\nAssignment:");
+  int c = a;
+  print("c = $c");
+  c += b; print("c += b → $c");
+  c -= b; print("c -= b → $c");
+  c *= b; print("c *= b → $c");
+  c ~/= b; print("c ~/= b → $c");
+  c %= b; print("c %= b → $c");
+  print("\nBitwise:");
+  print("a & b = ${a & b}");
+  print("a | b = ${a | b}");  
+  print("a ^ b = ${a ^ b}");  
+  print("~a = ${~a}");        
+  print("a << 1 = ${a << 1}"); 
+  print("a >> 1 = ${a >> 1}"); 
+  print("\nRelational:");
+  print("a == b → ${a == b}");
+  print("a != b → ${a != b}");
+  print("a > b  → ${a > b}");
+  print("a < b  → ${a < b}");
+  print("a >= b → ${a >= b}");
+  print("a <= b → ${a <= b}");
+}
